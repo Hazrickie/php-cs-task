@@ -1,0 +1,94 @@
+.doors{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    margin-top:200px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+body h1{
+
+    font-size: 60px;
+    font-family: poppins;
+}
+
+
+.hover-container {
+    width: 200px; /* Set the width of the container */
+    height: 400px; /* Set the height of the container */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hover-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Force the images to fit the container */
+    height: 100%; /* Maintain consistent sizing */
+    object-fit: cover; /* Adjust how the image scales */
+    transition: opacity 0.3s ease;
+    border-width: 3px;
+  }
+
+  .hover-container img.default {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .hover-container img.hover {
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .hover-container:hover img.default {
+    opacity: 0;
+  }
+
+  .hover-container:hover img.hover {
+    opacity: 1;
+  }
+
+
+  body{
+
+
+    background-color: #f3981b;
+    background-image: url('bgdoor.png');
+    background-size: cover; /* Makes the image cover the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+  }
+
+
+
+  .hover-button {
+    font-size: 50px;
+    font-family: 'Almendra SC';
+    
+    border: 2px solid black;
+    background-color: #f3981b;
+    color: black;
+    cursor: pointer;
+    border-radius: 200px;
+    transition: background-color 0.3s, color 0.3s;
+    height: 150px;
+    width: 1000px;
+    margin: 50px;
+    margin-left: 225px
+  }
+
+  .hover-button:hover {
+    color: #f3981b;
+    background-color: black;
+  }
+
+  .hover-button:hover::before {
+    content: "Made by Syazmin Hazeeq 1K6";
+  }
+
+  .hover-button::before {
+    content: "Choose a door!";
+  }
